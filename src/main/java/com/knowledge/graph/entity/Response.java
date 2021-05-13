@@ -2,11 +2,15 @@ package com.knowledge.graph.entity;
 
 import lombok.Data;
 
+/*
+返回到前端的统一数据格式
+*/
+
 @Data
 public class Response {
-    private Integer status;
+    private Integer status; //状态码
     private String message;
-    private Object data;
+    private Object data; //返回数据
 
     private Response(Integer status, String message, Object data){
         this.status = status;
