@@ -18,4 +18,9 @@ public class Entity1ServiceImpl implements Entity1Service {
     public List<Entity1> getAllEntity1() {
         return entity1Repository.findAll();
     }
+
+    @Override
+    public void addEntity1(Entity1 entity1) {
+        entity1Repository.save(entity1);
+    }
 }
