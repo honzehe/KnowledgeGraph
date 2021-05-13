@@ -11,9 +11,58 @@ import java.util.List;
  */
 
 @Data
-@Builder
 @Node
 public class Entity2{
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Entity1> getAttributeOf() {
+        return AttributeOf;
+    }
+
+    public void setAttributeOf(List<Entity1> attributeOf) {
+        AttributeOf = attributeOf;
+    }
+
+    public List<Entity1> getIs() {
+        return Is;
+    }
+
+    public void setIs(List<Entity1> is) {
+        Is = is;
+    }
+
+    public List<Entity1> getPartOf() {
+        return PartOf;
+    }
+
+    public void setPartOf(List<Entity1> partOf) {
+        PartOf = partOf;
+    }
+
+    @Override
+    public String toString() {
+        return "Entity2{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", AttributeOf=" + AttributeOf +
+                ", Is=" + Is +
+                ", PartOf=" + PartOf +
+                '}';
+    }
 
     @Id
     @GeneratedValue
