@@ -1,7 +1,6 @@
 package com.knowledge.graph;
 
-import com.knowledge.graph.service.Entity1Service;
-import com.knowledge.graph.service.Entity2Service;
+import com.knowledge.graph.service.BIMService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,14 +10,11 @@ public class KnowledgeGraphApplicationTest {
 
 
     @Autowired
-    Entity1Service entity1Service;
-
-    @Autowired
-    Entity2Service entity2Service;
+    private BIMService bimService;
 
     @Test
     void contextLoads() {
-        System.out.println(entity2Service.getAllEntity2());
+        System.out.println(bimService.getEndNodeWithRelationshipById(51l));
         System.out.println("查询成功");
     }
 }
