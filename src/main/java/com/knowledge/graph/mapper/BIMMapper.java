@@ -1,8 +1,6 @@
 package com.knowledge.graph.mapper;
 
 import com.knowledge.graph.node.BIMNode;
-import com.knowledge.graph.node.EndNodeWithRelationship;
-import com.knowledge.graph.node.RelationshipNode;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,5 +16,7 @@ public interface BIMMapper {
 
     public List<BIMNode> getNodeByName(@Param("name") String name);
 
-    public List<BIMNode> getNodesByStartId(@Param("sid") Long id);
+    public List<BIMNode> getEndNodes(@Param("sid") Long id);
+
+    public List<BIMNode> getStartNodes(@Param("eid") Long id);
 }

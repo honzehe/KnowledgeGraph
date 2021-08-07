@@ -47,13 +47,26 @@
         limit 10
     </select>
 
-    <select id="getNodesByStartId" resultMap="bimMap">
-        match
+    <select id="getEndNodes" resultMap="bimMap">
+       match
             (n) -[r]- ()
         <where>
             id(n) = #{sid}
+            And
+            id(startNode(r)) = #{sid}
         </where>
         return
             id(endNode(r)) as id
+    </select>
+    <select id="getStartNodes" resultMap="bimMap">
+        match
+            () -[r]- (n)
+        <where>
+            id(n) = #{eid}
+            And
+            id(EndNode(r)) = #{eid}
+        </where>
+        return
+            id(startNode(r)) as id
     </select>
 </mapper>

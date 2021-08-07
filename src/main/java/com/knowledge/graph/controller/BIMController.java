@@ -33,9 +33,9 @@ public class BIMController {
         return bimService.getNodeByName(name);
     }
 
-    @GetMapping("/getEndNodeById/{id}")
+    @GetMapping("/getAnotherNodeById/{id}")
     public Response getNodeWithRelationshipById(@PathVariable("id") Long id){
-        return bimService.getEndNodeWithRelationshipById(id);
+        return bimService.getAnotherNodeWithRelationshipById(id);
     }
 
     @GetMapping("/getNodeById/{id}")

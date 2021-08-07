@@ -14,7 +14,7 @@ public class KnowledgeGraphApplicationTest {
 
     @Test
     void contextLoads() {
-        System.out.println(bimService.getEndNodeWithRelationshipById(51l));
+        System.out.println(bimService.getAnotherNodeWithRelationshipById(51l));
         System.out.println("查询成功");
     }
 }
